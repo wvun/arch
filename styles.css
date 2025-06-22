@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cores base */
+:root {
+  --bg: #0D0D0D;
+  --fg: #E6E6E6;
+  --ciano: #00FFCC;
+  --magenta: #FF00AA;
+}
+
+/* Estilo geral */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Loader de entrada */
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#loadingText {
+  font-family: 'VT323', monospace;
+  color: var(--ciano);
+  font-size: 2rem;
+}
+
+/* Esconde o conteúdo até carregar */
+.hidden {
+  display: none;
+}
+
+/* Logo com efeito glitch/digitação */
+#logo {
+  font-family: 'VT323', monospace;
+  color: var(--ciano);
+  font-size: 3rem;
+  margin: 20px;
+  transition: text-shadow 0.3s ease;
+}
+#logo:hover {
+  text-shadow: 2px 0 var(--magenta), -2px 0 var(--ciano);
+}
+
+/* Terminal estilo DedSec */
+#terminal {
+  background: #1A1A1A;
+  padding: 20px;
+  margin: 20px;
+  border-left: 4px solid var(--ciano);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Grid de projetos */
+#projects {
+  padding: 20px;
+}
+#projects h2 {
+  color: var(--ciano);
+  margin-bottom: 10px;
+}
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+  background: #1A1A1A;
+  padding: 15px;
+  border: 2px solid var(--magenta);
+}
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-status {
+  color: var(--magenta);
+}
+
+/* Contato */
+#contact {
+  padding: 20px;
+}
+#contact a {
+  color: var(--ciano);
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media(max-width: 600px) {
+  #logo {
+    font-size: 2.5rem;
+  }
+  #loadingText {
+    font-size: 1.5rem;
+  }
+}
